@@ -22,7 +22,7 @@ public class EmployeeService {
 	public String add(Employee newEmp)
 	{
 		employee.add(newEmp);
-		return "sucessfully added";
+		return "Record added successfully!!";
 	}
 	
 	
@@ -30,7 +30,7 @@ public class EmployeeService {
 	public String delete(int employeeid) 
 	{
 		employee=employee.stream().filter(e->e.getEmployeeid()!=employeeid).collect(Collectors.toList());
-		return "Record Deleted";
+		return "Record Deleted successfully!!";
 	}
 	
 	
@@ -46,7 +46,7 @@ public class EmployeeService {
 			return e;
 		}).collect(Collectors.toList());
 		
-		return "Record Updated";
+		return "Record Updated sucessfully!!";
 	}
 }
 	
