@@ -1,4 +1,4 @@
-package com.abishai.employee;
+package com.abishai.employee; //package name
 
 import java.util.List;
 
@@ -14,42 +14,44 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/employee")
+@RequestMapping("/employee") //path
 public class EmployeeController {
-	@Autowired
+	@Autowired 
 	EmployeeService empRep;
 	
 	//To display all the records
+	
 	@GetMapping("/all")
 	public List<Employee> getAll()
 	{
-		return empRep.getAll();
+		return empRep.getAll(); //Calls the getall() in EmployeeService
 	}
 	
+	
 	// To add a record
+	
 	@PostMapping("/add")
 	public String add(@RequestBody Employee newEmp)
 	{
-		return empRep.add(newEmp);
+		return empRep.add(newEmp); //Calls the add function in EmployeeService
 	}
 	
+	
 	//To delete a record
+	
 	@DeleteMapping("/delete/{employeeid}")
 	public String delete(@PathVariable int employeeid)
 	{
-		return empRep.delete(employeeid);
+		return empRep.delete(employeeid); //Calls the delete function in EmployeeService
 	}
 	
 	
 	//To update a record
+	
 	@PutMapping("/update/{employeeid}")
 	public String update(@RequestBody Employee newEmp,@PathVariable int employeeid)
 	{
-		return empRep.update(newEmp,employeeid);
+		return empRep.update(newEmp,employeeid); ////Calls the update function in EmployeeService
 	}
 	
-	
-	
-
-
 }
