@@ -1,27 +1,25 @@
-package com.abishai.employee;
+package com.abishai.employee; //Package name
 
 public class Employee {
 	
-	//Created a class Employee with new attributes
+	//Created a class Employee with private attributes
 	private String name;
-
 	private String dateofbirth ;
-
 	private String dateofjoining;
-
 	private Double salary;
 	private String enterpriseid;
 	private Integer employeeid;
 	
-	//constructor without arguments
-	public Employee() {
+	//No argument constructor
+	public Employee() 
+	{
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
 	//constructor with arguments
-	public Employee(String name, String dateofbirth, String dateofjoining, Double salary, String enterpriseid,
-			Integer employeeid) {
+	public Employee(String name, String dateofbirth, String dateofjoining, Double salary, String enterpriseid,Integer employeeid)
+	{
 		super();
 		this.name = name;
 		this.dateofbirth = dateofbirth;
