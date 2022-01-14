@@ -51,7 +51,7 @@ public class EmployeeController {
 	@PutMapping("/update/{employeeid}")
 	public String update(@RequestBody Employee newEmp,@PathVariable int employeeid)
 	{
-		return empRep.update(newEmp,employeeid); ////Calls the update function in EmployeeService
+		return empRep.update(newEmp,employeeid); //Calls the update function in EmployeeService
 	}
 	
 }
